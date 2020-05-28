@@ -37,10 +37,10 @@ width: 18%
 .media-custom{
 border: 2px sold black;
 }
-.blog-author-picture{
+.blog-author-picture-custom{
 border: 1px solid #ddd;
-border-radius: 30%;
-width: 10%;
+border-radius: 22%;
+width: 18%;
 }
 #author-name{
 margin-left: 1%;
