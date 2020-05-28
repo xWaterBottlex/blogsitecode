@@ -22,4 +22,4 @@ class Post(models.Model):
         return reverse('post-detail', kwargs={'pk': self.pk})
 
     def get_api_url(self):
-        return reverse("post-api:post-rud", kwargs={'pk': self.pk})
+        return reverse("post-rud", kwargs={'pk': self.pk})
