@@ -18,8 +18,8 @@ class Post(models.Model):
     def owner(self):
         return self.user
 
-    # def get_absolute_url(self):
-    #     return reverse('post-detail', kwargs={'pk': self.pk})
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
 
     def get_api_url(self):
-        return api_reverse("post-api:post-rud", kwargs={'pk': self.pk})
+        return api_reverse("post-api:post-rud", kwargs=['pk': self.pk])
