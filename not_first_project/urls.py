@@ -36,6 +36,7 @@ urlpatterns = [
     path('password-reset/complete/', auth_views.PasswordResetCompleteView.as_view(template_name='firstapp/password_reset_complete.html'),
          name='password-reset-complete'),
     path('profile/', user_views.profile, name='guitar-lovers-profile'),
+    path('api/', include('api.urls'), name='post-api')
 
 ]
 

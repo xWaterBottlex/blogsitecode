@@ -78,3 +78,6 @@ def fourms(request):
     }
     return render(request, 'firstapp/g-l-fourms.html', context)
 
+def api_info(request):
+    return render(request, 'firstapp/api-info.html')
+

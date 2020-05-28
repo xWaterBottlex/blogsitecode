@@ -1,69 +1,45 @@
-{% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
-    <link rel="stylesheet" href="{% static 'firstapp/BSTRP_project.css' %}">
-    <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blog project
+  </title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+   crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light" style="background: #FFEFE8;">
-        <div class="container">
-            <a class="navbar-brand navbar-brand-custom" href="{% url 'guitar-lovers-home' %}">Bender Guitars</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a href="{% url 'guitar-lovers-fourms' %}">Forums <span class="sr-only">(current)</span></a>
-                    </li>
-                    {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-item nav-link" href="{% url 'guitar-lovers-logout' %}">Log Out</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item nav-link" href="{% url 'guitar-lovers-profile' %}">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-item nav-link" href="{% url 'post-new' %}">Post</a>
-                        </li>
-                    {% else %}
-                        <li class="nav-item">
-                            <a href="{% url 'guitar-lovers-login' %}">Log In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{% url 'guitar-lovers-register' %}">Register</a>
-                        </li>
-                    {% endif %}
-                </ul>
-<!--        <form class="form-inline my-2 my-lg-0">-->
-<!--          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-<!--        </form>-->
-            </div>
-      </div>
-    </nav>
-
-    <br>
-
-    <div class="container">
-        {% if messages %}
-            {% for message in messages %}
-                <div class ="alert alert-{{ message.tags }}">{{ message }}</div>
-            {% endfor %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="{% url 'guitar-lovers-home' %}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="{% url 'guitar-lovers-fourms' %}">Blogs</a>
+        <a class="nav-item nav-link" href="{% url 'post-new' %}">New Blog</a>
+        {% if user.is_authenticated %}
+          <a class="nav-item nav-link" href="{% url 'guitar-lovers-logout' %}">Log out</a>
+          <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Registered</a>
+          <a class="nav-item nav-link" href="{% url 'api-info' %}">API</a>
+        {% else %}
+          <a class="nav-item nav-link" href="{% url 'guitar-lovers-register' %}">Register</a>
+          <a class="nav-item nav-link" href="{% url 'guitar-lovers-login' %}">LogIn </a>
+          <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">API</a>
         {% endif %}
-        {% block content %}
-        {% endblock content %}
+      </div>
     </div>
+  </nav>
+  {% block content %}
+  {% endblock %}
 </body>
 </html>

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'firstapp',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
