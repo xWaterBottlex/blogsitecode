@@ -39,8 +39,8 @@ border: 2px sold black;
 }
 .blog-author-picture{
 border: 1px solid #ddd;
-border-radius: 30%;
-width: 10%;
+border-radius: 50%;
+width: 25%;
 }
 #author-name{
 margin-left: 1%;
