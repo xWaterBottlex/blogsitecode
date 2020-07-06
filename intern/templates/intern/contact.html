@@ -1,0 +1,18 @@
+{% extends 'firstapp/base.html' %}
+
+{% block content %}
+
+<!--    below we will render the message fields-->
+    <div id="contact">
+        <h2 class="display-2">Get In Touch</h2>
+        <form method="post" class="form-group">
+            {% csrf_token %}
+            <label class="label" for="sender-email"> Your Email</label>
+            <input class="form-actions" type="email" name="sender-email" id="sender-email"><br>
+            <label class="label" for="message">Content</label>
+            <input type="text" class="form-actions" name="message" id="message"><br>
+            <button class="btn-info" >Send</button>
+        </form>
+    </div>
+
+{% endblock %}

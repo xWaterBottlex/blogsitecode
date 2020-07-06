@@ -52,3 +52,11 @@ small{
     margin-top: 2%;
     text-align: left;
 }
+#closingDiv{
+    /*border: 1px solid #b9def0;*/
+    background-color: #b9def0;
+    padding: 10px;
+    text-align: -moz-center;
+    margin-bottom: 10px;
+    border-top: 400px;
+}

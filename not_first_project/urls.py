@@ -20,6 +20,8 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.conf import settings
 
+from intern import urls as intern_urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,7 +38,8 @@ urlpatterns = [
     path('password-reset/complete/', auth_views.PasswordResetCompleteView.as_view(template_name='firstapp/password_reset_complete.html'),
          name='password-reset-complete'),
     path('profile/', user_views.profile, name='guitar-lovers-profile'),
-    path('api/', include('api.urls'), name='post-api')
+    path('api/', include('api.urls'), name='post-api'),
+    path('', include(intern_urls)),
 
 ]
 
