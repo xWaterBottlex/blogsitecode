@@ -1,0 +1,49 @@
+.navbar navbar-light bg-light navbar-custom{
+background: #f1ddcf;
+}
+.jumbotron-custom{
+background: #DAECF3;
+margin-top: 2%;
+border-radius: 2%;
+margin-right: 2%;
+margin-left: 2%;
+}
+.lead{
+margin-top: 10%;
+}
+.body-custom{
+background: #E8E8E8;
+}
+.display-4{
+/*    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2; */
+    color: #74009F /*pink*/;
+}
+.navbar-brand-custom{
+font-family: 'Pacifico';
+}
+.media-body-custom{
+background: #b2ffff;
+margin: 3%;
+border: 1px solid black;
+}
+small{
+text-decoration: underline;
+}
+.img-custom{
+width: 18%
+}
+.media-custom{
+border: 2px sold black;
+}
+.blog-author-picture-coustom{
+border: 1px solid #ddd;
+border-radius: 50%;
+width: 25%;
+}
+#author-name{
+margin-left: 1%;
+margin-top: 2%;
+text-align: left;
+}
