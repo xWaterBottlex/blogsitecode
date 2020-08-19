@@ -16,6 +16,8 @@ whitenoise = "*"
 gunicorn = "*"
 Django = "==3.0.6"
 Pillow = "==7.1.2"
+sentry-sdk = "==0.16.5"
+
 
 [requires]
 python_version = "3.8"
